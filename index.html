@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="R. Sivanesh — AI & ML Student at IFET College of Engineering. Portfolio showcasing projects, skills, and certifications." />
+  <meta name="keywords" content="R. Sivanesh, AI, Machine Learning, Python, Portfolio, IFET" />
+  <meta name="author" content="R. Sivanesh" />
+  <title>R. Sivanesh | Portfolio</title>
+
+  <!-- Poppins Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <!-- Navbar brand: permanent logo + animated text -->
+      <a href="#home" class="nav-brand" aria-label="Go to home" id="nav-brand">
+        <!-- RS logo — always visible -->
+        <span class="brand-logo-wrap" aria-hidden="true">
+          <img src="assets/logo/rs-logo.png" alt="RS Logo" class="brand-logo-img" onerror="this.style.display='none'" />
+        </span>
+        <!-- Animated text slot -->
+        <span class="brand-text-wrap" aria-label="R. Sivanesh">
+          <span class="brand-text brand-t1" id="brand-t1">R. Sivanesh</span>
+          <span class="brand-text brand-t2" id="brand-t2">R.S STUDIOS</span>
+        </span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle dark/light theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <a href="#home" class="mob-link">Home</a>
+      <a href="#about" class="mob-link">About</a>
+      <a href="#skills" class="mob-link">Skills</a>
+      <a href="#projects" class="mob-link">Projects</a>
+      <a href="#certificates" class="mob-link">Certificates</a>
+      <a href="#contact" class="mob-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section id="home" class="hero" aria-label="Hero">
+    <div class="container hero-grid">
+
+      <!-- Left: Text -->
+      <div class="hero-text reveal">
+        <span class="hero-greeting">HELLO, I'M</span>
+        <h1 class="hero-name">R. Sivanesh</h1>
+        <p class="hero-subtitle">AI &amp; ML Student &nbsp;|&nbsp; Tech Enthusiast</p>
+        <blockquote class="hero-quote">
+          "Turning ideas into experiences through AI and software."
+        </blockquote>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="assets/resume/resume.pdf" download class="btn btn-outline">
+            <i class="fas fa-download" aria-hidden="true"></i> Resume
+          </a>
+        </div>
+
+        <div class="hero-socials" role="list" aria-label="Social links">
+          <a href="https://www.linkedin.com/in/sivanesh-rajasekar-a08059361" target="_blank" rel="noopener noreferrer"
+            class="soc-icon" aria-label="LinkedIn" role="listitem">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://youtube.com/@r.s.studioss" target="_blank" rel="noopener noreferrer" class="soc-icon"
+            aria-label="YouTube" role="listitem">
+            <i class="fab fa-youtube"></i>
+          </a>
+          <a href="https://www.instagram.com/r.s_studioss" target="_blank" rel="noopener noreferrer" class="soc-icon"
+            aria-label="Instagram" role="listitem">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:r.sivanesh2506@gmail.com" class="soc-icon" aria-label="Email" role="listitem">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Image -->
+      <div class="hero-image reveal" data-delay="150">
+        <div class="profile-ring">
+          <img src="assets/profile/profile.jpg" alt="R. Sivanesh" class="profile-photo" id="profile-img"
+            onerror="this.style.display='none'; document.getElementById('profile-fallback').style.display='flex';" />
+          <div id="profile-fallback" class="profile-fallback" style="display:none;">
+            <i class="fas fa-user" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════ ABOUT ══════════════ -->
+  <section id="about" class="section" aria-label="About">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">About Me</span>
+        <h2 class="sec-title">Who I Am</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio reveal">
+          <p>
+            I am an AIML student passionate about Artificial Intelligence, programming, and
+            technology-driven problem solving. I have strong experience in Python and knowledge
+            of programming languages including C, C++, and C#. I also have a solid foundation
+            in HTML, CSS, and JavaScript. I enjoy building projects and exploring how AI and
+            software can be used to solve real-world challenges. I am continuously learning new
+            technologies to strengthen my development skills.
+          </p>
+
+          <div class="edu-card reveal" data-delay="100">
+            <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <strong>IFET College of Engineering</strong>
+              <span>B.Tech Artificial Intelligence &amp; Machine Learning</span>
+              <span class="edu-batch">2025 – 2029</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-interests reveal" data-delay="150">
+          <h3 class="interests-label">Interests</h3>
+          <ul class="interests-list" role="list">
+            <li><i class="fas fa-brain" aria-hidden="true"></i> Artificial Intelligence</li>
+            <li><i class="fas fa-code" aria-hidden="true"></i> Programming</li>
+            <li><i class="fas fa-gamepad" aria-hidden="true"></i> Game Development</li>
+            <li><i class="fas fa-photo-video" aria-hidden="true"></i> Multimedia</li>
+            <li><i class="fas fa-microchip" aria-hidden="true"></i> Technology</li>
+            <li><i class="fas fa-laptop-code" aria-hidden="true"></i> Software Development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SKILLS ══════════════ -->
+  <section id="skills" class="section section-alt" aria-label="Skills">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">Skills</span>
+        <h2 class="sec-title">What I Know</h2>
+      </div>
+
+      <div class="skills-cols">
+        <!-- Programming Languages -->
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">Programming Languages</h3>
+          <div class="skill-chips">
+            <div class="skill-chip"><i class="fab fa-python"></i> Python</div>
+            <div class="skill-chip"><span class="chip-letter">C</span> C</div>
+            <div class="skill-chip"><span class="chip-letter">C++</span> C++</div>
+            <div class="skill-chip"><span class="chip-letter">C#</span> C#</div>
+            <div class="skill-chip"><i class="fab fa-html5"></i> HTML</div>
+            <div class="skill-chip"><i class="fab fa-css3-alt"></i> CSS</div>
+            <div class="skill-chip"><i class="fab fa-js"></i> JavaScript</div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-group reveal" data-delay="100">
+          <h3 class="skill-group-title">Tools &amp; Software</h3>
+          <div class="skill-chips">
+            <div class="skill-chip"><i class="fas fa-code"></i> VS Code</div>
+            <div class="skill-chip"><i class="fas fa-gamepad"></i> Unity</div>
+            <div class="skill-chip"><i class="fas fa-cube"></i> Blender</div>
+            <div class="skill-chip"><i class="fas fa-rocket"></i> Antigravity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ PROJECTS ══════════════ -->
+  <section id="projects" class="section" aria-label="Projects">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">Projects</span>
+        <h2 class="sec-title">What I've Built</h2>
+      </div>
+
+      <!-- Filter & Search -->
+      <div class="proj-controls reveal">
+        <div class="search-box">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input type="search" id="proj-search" placeholder="Search projects…" aria-label="Search projects" />
+        </div>
+        <div class="filter-row" role="group" aria-label="Filter by category">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ai">AI / ML</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="game">Game</button>
+          <button class="filter-btn" data-filter="python">Python</button>
+        </div>
+      </div>
+
+      <!-- Cards rendered by script.js -->
+      <div class="proj-grid" id="proj-grid" aria-label="Project list"></div>
+      <div id="proj-empty" class="empty-state" style="display:none;">
+        <i class="fas fa-folder-open fa-2x"></i>
+        <p>No projects match your search.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CERTIFICATES ══════════════ -->
+  <section id="certificates" class="section section-alt" aria-label="Certificates">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">Credentials</span>
+        <h2 class="sec-title">Certifications</h2>
+      </div>
+      <div class="cert-grid" id="cert-grid" aria-label="Certificate list"></div>
+    </div>
+  </section>
+
+  <!-- Certificate Modal -->
+  <div id="cert-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true"
+    aria-label="Certificate preview">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="modal-img" src="" alt="Certificate" class="modal-img" />
+      <div class="modal-meta">
+        <h3 id="modal-title"></h3>
+        <p id="modal-org"></p>
+        <p id="modal-date"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ CONTACT ══════════════ -->
+  <section id="contact" class="section" aria-label="Contact">
+    <div class="container">
+      <div class="sec-header reveal">
+        <span class="sec-tag">Contact</span>
+        <h2 class="sec-title">Get In Touch</h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info -->
+        <div class="contact-info reveal">
+          <p class="contact-intro">Have a question or opportunity? I'd love to hear from you.</p>
+
+          <div class="contact-links">
+            <a href="mailto:r.sivanesh2506@gmail.com" class="c-link">
+              <i class="fas fa-envelope"></i>
+              <span>r.sivanesh2506@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/sivanesh-rajasekar-a08059361" target="_blank" rel="noopener noreferrer"
+              class="c-link">
+              <i class="fab fa-linkedin-in"></i>
+              <span>sivanesh-rajasekar</span>
+            </a>
+            <a href="https://youtube.com/@r.s.studioss" target="_blank" rel="noopener noreferrer" class="c-link">
+              <i class="fab fa-youtube"></i>
+              <span>@r.s.studioss</span>
+            </a>
+            <a href="https://www.instagram.com/r.s_studioss" target="_blank" rel="noopener noreferrer" class="c-link">
+              <i class="fab fa-instagram"></i>
+              <span>@r.s_studioss</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap reveal" data-delay="100">
+          <form id="contact-form" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <label for="f-name">Name</label>
+              <input type="text" id="f-name" name="name" placeholder="Your name" required autocomplete="name" />
+              <span class="f-err" id="err-name" role="alert"></span>
+            </div>
+            <div class="form-row">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" placeholder="your@email.com" required
+                autocomplete="email" />
+              <span class="f-err" id="err-email" role="alert"></span>
+            </div>
+            <div class="form-row">
+              <label for="f-msg">Message</label>
+              <textarea id="f-msg" name="message" placeholder="Your message…" rows="5" required></textarea>
+              <span class="f-err" id="err-msg" role="alert"></span>
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit-btn">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i>
+              <span id="submit-label">Send Message</span>
+            </button>
+            <div id="form-feedback" class="form-feedback" aria-live="polite" style="display:none;"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>&copy; <span id="yr"></span> R. Sivanesh. All rights reserved.</p>
+      <p class="footer-credit">Built with HTML, CSS, JavaScript, Supabase &amp; Vercel.</p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top -->
+  <button id="scroll-top" class="scroll-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
