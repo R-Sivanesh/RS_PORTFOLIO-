@@ -71,7 +71,7 @@ const CERTS = [
     title: 'Diploma in Python',
     org: 'CSN Infotech — Software Solution Provider',
     date: 'Apr 2025 – Aug 2025 · Grade: A+',
-    image: 'assets/certificates/certificate1.jpg',
+    image: 'assets/certificates/certificate_amaze.jpeg',
   },
 ];
 
@@ -81,6 +81,10 @@ const CERTS = [
 const html = document.documentElement;
 const themeBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
+
+function setIcon(theme) {
+  themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+}
 
 // Apply saved preference or default dark
 const saved = localStorage.getItem('rs-theme') || 'dark';
@@ -93,10 +97,6 @@ themeBtn.addEventListener('click', () => {
   localStorage.setItem('rs-theme', next);
   setIcon(next);
 });
-
-function setIcon(theme) {
-  themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-}
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    3. NAVBAR â€” scrolled state + active section link
@@ -164,7 +164,23 @@ const revealObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 // Observe all .reveal elements
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+function initReveal() {
+  document.querySelectorAll('.reveal').forEach(el => {
+    // For hero section (at top of page), show immediately
+    if (el.closest('.hero')) {
+      el.classList.add('in');
+    } else {
+      revealObs.observe(el);
+    }
+  });
+}
+
+// Call immediately after DOM is ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initReveal);
+} else {
+  initReveal();
+}
 
 // Re-observe helper (used after dynamic DOM renders)
 function observeNew(parent) {
@@ -197,7 +213,7 @@ function projectCard(p) {
   return `
     <article class="proj-card reveal" aria-label="${p.title}">
       <div class="proj-img-wrap">
-        <img src="${p.image}" alt="${p.title}" class="proj-img" loading="lazy"
+        <img src="${p.image}" alt="${p.title}" class="proj-img" loading="lazy" decoding="async"
              onerror="this.src='assets/projects/project1.png'" />
       </div>
       <div class="proj-body">
@@ -263,8 +279,10 @@ function certCard(c) {
              onclick="openModal(${c.id})"
              onkeydown="if(event.key==='Enter'||event.key===' ')openModal(${c.id})">
       <div class="cert-img-wrap">
-        <img src="${c.image}" alt="${c.title}" class="cert-img" loading="lazy"
-             onerror="this.src='assets/certificates/certificate1.jpg'" />
+        <img src="${c.image}" alt="${c.title}" class="cert-img" 
+             decoding="async" fetchpriority="low"
+             onload="this.classList.add('loaded')"
+             onerror="this.src='assets/certificates/certificate_amaze.jpeg'" />
       </div>
       <div class="cert-body">
         <h3 class="cert-title">${c.title}</h3>
@@ -280,10 +298,30 @@ function certCard(c) {
 certGrid.innerHTML = CERTS.map(certCard).join('');
 observeNew(certGrid);
 
+// Preload certificate images for faster modal opening
+function preloadCertImages() {
+  try {
+    CERTS.forEach(cert => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = cert.image;
+      document.head.appendChild(link);
+    });
+  } catch (e) {
+    console.error('Cert preload error:', e);
+  }
+}
+
+// Defer preload to avoid blocking page load
+setTimeout(preloadCertImages, 1000);
+
 /** Open the certificate modal */
 function openModal(id) {
   const cert = CERTS.find(c => c.id === id);
   if (!cert) return;
+  // Preload image with async decoding for better performance
+  modalImg.decoding = 'async';
   modalImg.src = cert.image;
   modalImg.alt = cert.title;
   modalTitle.textContent = cert.title;
