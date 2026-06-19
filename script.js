@@ -1,4 +1,4 @@
-﻿/**
+/**
  * script.js â€” Main JavaScript for R. Sivanesh Portfolio
  * â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
  *  1. Data  â† ADD YOUR PROJECTS & CERTS HERE
@@ -69,17 +69,10 @@ const CERTS = [
   {
     id: 1,
     title: 'Diploma in Python',
-    org: 'Issuing Organization',
-    date: '2025',
+    org: 'CSN Infotech — Software Solution Provider',
+    date: 'Apr 2025 – Aug 2025 · Grade: A+',
     image: 'assets/certificates/certificate1.jpg',
   },
-  // {
-  //   id: 2,
-  //   title: 'Machine Learning Fundamentals',
-  //   org: 'Coursera / Google',
-  //   date: 'June 2025',
-  //   image: 'assets/certificates/certificate2.jpg',
-  // },
 ];
 
 /* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
