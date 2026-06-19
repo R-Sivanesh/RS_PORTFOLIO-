@@ -208,7 +208,7 @@ function projectCard(p) {
     ? `<a href="${p.demo}" target="_blank" rel="noopener noreferrer" class="proj-link primary">
          <i class="fas fa-external-link-alt"></i> Demo</a>` : '';
   const fallback = !p.github && !p.demo
-    ? `<span style="font-size:0.78rem;color:var(--text-3);">ðŸš§ In progress</span>` : '';
+    ? `<span style="font-size:0.78rem;color:var(--text-3);">🚧 In progress</span>` : '';
 
   return `
     <article class="proj-card reveal" aria-label="${p.title}">
